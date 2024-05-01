@@ -1,0 +1,125 @@
+/* Estilo do corpo */
+body {
+    background-color: #282a36;
+}
+
+/* Estilo do jogo */
+.jogo {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo da tela do jogo */
+.tela {
+    display: grid;
+    grid-template-areas: 'verde vermelho' 'amarelo azul';
+    grid-gap: 10px;
+    border: 1px solid #ffffff;
+    background-color: black;
+    border-radius: 100%;
+    width: 700px;
+    height: 700px;
+}
+
+/* Estilo dos painéis */
+.painel {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.painel:hover {
+    opacity: 1;
+    transform: scale(1.03);
+    box-shadow: inset 0px 0px 0px 3px white;
+}
+
+/* Estilo dos painéis de cada cor */
+.verde {
+    grid-area: verde;
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.vermelho {
+    grid-area: vermelho;
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.azul {
+    grid-area: azul;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+.amarelo {
+    grid-area: amarelo;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+/* Estilo dos botões */
+button {
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/* Estilo dos títulos */
+h1 {
+    text-align: center;
+    color: white;
+}
+
+/* Estilo do botão de iniciar/jogar */
+.botao {
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+
+/* Estilo do centro */
+.centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    margin-left: -8.3vw;
+    margin-top: -11vh;
+    border-radius: 50%;
+    background-color: white;
+}
+
+span {
+    text-align: center;
+    font-size: 80px;
+    font-family: Arial;
+}
+
+/* Estilo do centro para telas menores */
+@media only screen and (max-width: 1080px) {
+    .centro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 48%;
+        left: 41.5%;
+        width: 300px;
+        height: 300px;
+        margin-left: -6vw;
+        margin-top: -7vh;
+        border-radius: 50%;
+        background-color: white;
+    }
+}
